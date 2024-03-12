@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "EmmerApplication/1.0.0": {
+        "dependencies": {
+          "Emmer.Library": "1.0.0"
+        },
+        "runtime": {
+          "EmmerApplication.dll": {}
+        }
+      },
+      "Emmer.Library/1.0.0": {
+        "runtime": {
+          "Emmer.Library.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "EmmerApplication/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Emmer.Library/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
