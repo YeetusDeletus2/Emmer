@@ -1,12 +1,19 @@
 ﻿using System;
+using System.Runtime.CompilerServices;
 using Emmer.Library;
 
 namespace EmmerApplication
 {
     class Program
     {
+        
         static void Main(string[] args)
         {
+            void HandleOverflow(int overflowAmount)
+            {
+                Console.WriteLine($"Bucket overflowed by {overflowAmount} units!");
+            }
+/*            
             Console.WriteLine("Making a bucket with default capacity.");
             try
             {
@@ -64,7 +71,7 @@ namespace EmmerApplication
                     Console.WriteLine($"An InvalidOperationException occurred: {e.Message}");
                 }
 
-                Console.WriteLine("\nIncreaseing the contents of the rai barrel with 110 units.");
+                Console.WriteLine("\nIncreaseing the contents of the rainbarrel with 110 units.");
                 try
                 {
                     rainBarrel.IncreaseContent(110);
@@ -86,17 +93,17 @@ namespace EmmerApplication
             Oilbarrel oilBarrel = new Oilbarrel();
             Console.WriteLine(
                 $"Oil Barrel Capacity: {oilBarrel.Capacity} || Oil Barrel Contents: {oilBarrel.Contents}");
-
+*/
             Console.WriteLine("\nMaking a bucket with capacity 10.");
             try
             {
-                Bucket bucket2 = new Bucket(10);
+                Bucket bucket2 = new Bucket();
                 Console.WriteLine($"Bucket Capacity: {bucket2.Capacity} || Bucket Contents: {bucket2.Contents}");
 
                 Console.WriteLine("\nIncreasing the contents of the bucket with 5 units.");
                 try
                 {
-                    bucket2.IncreaseContent(5);
+                    bucket2.IncreaseContent(12);
                 }
                 catch (ArgumentOutOfRangeException e)
                 {
@@ -104,7 +111,8 @@ namespace EmmerApplication
                 }
                 Console.WriteLine($"Bucket Capacity: {bucket2.Capacity} || Bucket Contents: {bucket2.Contents}");
                 Console.WriteLine("Making a standard bucket.");
-                Bucket bucket3 = new Bucket();
+                Bucket bucket3 = new Bucket(10);
+                bucket3.Overflow += HandleOverflow;
                 
                 Console.WriteLine("\nFilling the new bucket with the contents of the other bucket.");
                 try

@@ -28,9 +28,10 @@ C:\Users\11897\RiderProjects\Emmer\EmmerApplication\obj\Debug\net8.0\EmmerApplic
 C:\Users\11897\RiderProjects\Emmer\EmmerApplication\obj\Debug\net8.0\EmmerApplication.AssemblyInfoInputs.cache
 C:\Users\11897\RiderProjects\Emmer\EmmerApplication\obj\Debug\net8.0\EmmerApplication.AssemblyInfo.cs
 C:\Users\11897\RiderProjects\Emmer\EmmerApplication\obj\Debug\net8.0\EmmerApplication.csproj.CoreCompileInputs.cache
-C:\Users\11897\RiderProjects\Emmer\EmmerApplication\obj\Debug\net8.0\EmmerApplication.csproj.CopyComplete
 C:\Users\11897\RiderProjects\Emmer\EmmerApplication\obj\Debug\net8.0\EmmerApplication.dll
 C:\Users\11897\RiderProjects\Emmer\EmmerApplication\obj\Debug\net8.0\refint\EmmerApplication.dll
 C:\Users\11897\RiderProjects\Emmer\EmmerApplication\obj\Debug\net8.0\EmmerApplication.pdb
 C:\Users\11897\RiderProjects\Emmer\EmmerApplication\obj\Debug\net8.0\EmmerApplication.genruntimeconfig.cache
 C:\Users\11897\RiderProjects\Emmer\EmmerApplication\obj\Debug\net8.0\ref\EmmerApplication.dll
+C:\Users\11897\RiderProjects\Emmer\EmmerApplication\obj\Debug\net8.0\EmmerApplication.sourcelink.json
+C:\Users\11897\RiderProjects\Emmer\EmmerApplication\obj\Debug\net8.0\EmmerApp.A3C355B4.Up2Date

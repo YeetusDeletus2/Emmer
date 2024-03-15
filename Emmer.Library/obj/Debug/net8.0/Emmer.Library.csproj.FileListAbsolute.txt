@@ -20,3 +20,4 @@ C:\Users\11897\RiderProjects\Emmer\Emmer.Library\obj\Debug\net8.0\Emmer.Library.
 C:\Users\11897\RiderProjects\Emmer\Emmer.Library\obj\Debug\net8.0\refint\Emmer.Library.dll
 C:\Users\11897\RiderProjects\Emmer\Emmer.Library\obj\Debug\net8.0\Emmer.Library.pdb
 C:\Users\11897\RiderProjects\Emmer\Emmer.Library\obj\Debug\net8.0\ref\Emmer.Library.dll
+C:\Users\11897\RiderProjects\Emmer\Emmer.Library\obj\Debug\net8.0\Emmer.Library.sourcelink.json

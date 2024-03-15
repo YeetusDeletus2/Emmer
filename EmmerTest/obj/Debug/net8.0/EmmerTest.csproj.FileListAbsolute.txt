@@ -94,9 +94,10 @@ C:\Users\11897\RiderProjects\Emmer\EmmerTest\obj\Debug\net8.0\EmmerTest.Generate
 C:\Users\11897\RiderProjects\Emmer\EmmerTest\obj\Debug\net8.0\EmmerTest.AssemblyInfoInputs.cache
 C:\Users\11897\RiderProjects\Emmer\EmmerTest\obj\Debug\net8.0\EmmerTest.AssemblyInfo.cs
 C:\Users\11897\RiderProjects\Emmer\EmmerTest\obj\Debug\net8.0\EmmerTest.csproj.CoreCompileInputs.cache
-C:\Users\11897\RiderProjects\Emmer\EmmerTest\obj\Debug\net8.0\EmmerTest.csproj.CopyComplete
 C:\Users\11897\RiderProjects\Emmer\EmmerTest\obj\Debug\net8.0\EmmerTest.dll
 C:\Users\11897\RiderProjects\Emmer\EmmerTest\obj\Debug\net8.0\refint\EmmerTest.dll
 C:\Users\11897\RiderProjects\Emmer\EmmerTest\obj\Debug\net8.0\EmmerTest.pdb
 C:\Users\11897\RiderProjects\Emmer\EmmerTest\obj\Debug\net8.0\EmmerTest.genruntimeconfig.cache
 C:\Users\11897\RiderProjects\Emmer\EmmerTest\obj\Debug\net8.0\ref\EmmerTest.dll
+C:\Users\11897\RiderProjects\Emmer\EmmerTest\obj\Debug\net8.0\EmmerTest.sourcelink.json
+C:\Users\11897\RiderProjects\Emmer\EmmerTest\obj\Debug\net8.0\EmmerTest.csproj.Up2Date
