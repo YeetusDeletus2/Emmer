@@ -1,4 +1,6 @@
 ﻿namespace Emmer.Library;
+public delegate void OverflowEventHandler(int overflowAmount);
+
 
 public class Container
 {

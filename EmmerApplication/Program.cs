@@ -6,18 +6,18 @@ namespace EmmerApplication
 {
     class Program
     {
-        
         static void Main(string[] args)
         {
             void HandleOverflow(int overflowAmount)
             {
                 Console.WriteLine($"Bucket overflowed by {overflowAmount} units!");
             }
-/*            
+            
             Console.WriteLine("Making a bucket with default capacity.");
             try
             {
                 Bucket bucket1 = new Bucket();
+                bucket1.Overflow += HandleOverflow;
                 Console.WriteLine($"Bucket Capacity: {bucket1.Capacity} || Bucket Contents: {bucket1.Contents}");
 
                 Console.WriteLine("\nIncreasing the contents of the bucket with 8 units.");
@@ -93,14 +93,14 @@ namespace EmmerApplication
             Oilbarrel oilBarrel = new Oilbarrel();
             Console.WriteLine(
                 $"Oil Barrel Capacity: {oilBarrel.Capacity} || Oil Barrel Contents: {oilBarrel.Contents}");
-*/
+
             Console.WriteLine("\nMaking a bucket with capacity 10.");
             try
             {
                 Bucket bucket2 = new Bucket();
                 Console.WriteLine($"Bucket Capacity: {bucket2.Capacity} || Bucket Contents: {bucket2.Contents}");
 
-                Console.WriteLine("\nIncreasing the contents of the bucket with 5 units.");
+                Console.WriteLine("\nIncreasing the contents of the bucket with 12 units.");
                 try
                 {
                     bucket2.IncreaseContent(12);

@@ -2,10 +2,8 @@ namespace Emmer.Library;
 
 public class Bucket : Container
 {
-    public delegate void OverflowEventHandler(int overflowAmount);
-
     public event OverflowEventHandler Overflow;
-    
+
     public Bucket(int capacity)
     {
         if (capacity < 10 || capacity > 12)
@@ -15,6 +13,7 @@ public class Bucket : Container
 
         this.Capacity = capacity;
     }
+
 
     public Bucket()
     {
@@ -36,13 +35,15 @@ public class Bucket : Container
 
             Console.WriteLine($"How much do you want the bucket to overflow? max: {overflowAmount}");
             int overflow = int.Parse(Console.ReadLine());
-            
-            this.IncreaseContent(this.Capacity);
-            bucket.DecreaseContent(temp - overflow);
-            // Console.WriteLine("overflowAmount: "+ overflowAmount);
-            // this.IncreaseContent(this.Contents + temp - this.Capacity);
-            // bucket.DecreaseContent(temp + overflowAmount);
+            if (overflow <= overflowAmount)
+            {
+                this.IncreaseContent(this.Capacity);
+                bucket.DecreaseContent(temp - overflow);
+            }
+            else
+            {
+                Console.WriteLine("Invalid overflow amount. Aborting bucket transfer.");
+            }
         }
     }
-    
 }
