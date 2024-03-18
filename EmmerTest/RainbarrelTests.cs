@@ -8,25 +8,17 @@ public class RainbarrelTests
     [Test]
     public void ValidCapacities()
     {
-        Assert.DoesNotThrow(() => new Rainbarrel(80));
-        Assert.DoesNotThrow(() => new Rainbarrel(100));
-        Assert.DoesNotThrow(() => new Rainbarrel(120));
-    }
-
-    [Test]
-    public void InvalidCapacities()
-    {
-        Assert.Throws<WrongCapacityException>(() => new Rainbarrel(50));
-        Assert.Throws<WrongCapacityException>(() => new Rainbarrel(110));
-        Assert.Throws<WrongCapacityException>(() => new Rainbarrel(130));
+        Assert.DoesNotThrow(() => new Rainbarrel(RainbarrelCapacity.Eighty));
+        Assert.DoesNotThrow(() => new Rainbarrel(RainbarrelCapacity.Hundered));
+        Assert.DoesNotThrow(() => new Rainbarrel(RainbarrelCapacity.HunderedTwenty));
     }
 
     [Test]
     public void FillAndEmptyRainbarrel()
     {
-        var rainbarrel = new Rainbarrel(100);
+        var rainbarrel = new Rainbarrel(RainbarrelCapacity.Hundered);
         int amount = 5;
-        rainbarrel.IncreaseContent(amount);
+        rainbarrel.FillContent(amount);
         Assert.That(rainbarrel.Contents, Is.EqualTo(amount));
 
         rainbarrel.EmptyContent();

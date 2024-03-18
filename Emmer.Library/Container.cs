@@ -1,18 +1,18 @@
 ﻿namespace Emmer.Library;
-public delegate void OverflowEventHandler(int overflowAmount);
 
+public delegate void OverflowEventHandler(int overflowAmount);
 
 public class Container
 {
-    private int capacity;
-    private int contents;
+    private int _capacity;
+    private int _contents;
 
     public int Capacity
     {
-        get { return capacity; }
+        get { return _capacity; }
         set
         {
-            if (capacity == 0)
+            if (_capacity == 0)
             {
                 if (value < 0 || value > 2500)
                 {
@@ -20,7 +20,7 @@ public class Container
                         "The capacity cannot be below 0 or exceed 2500.");
                 }
 
-                capacity = value;
+                _capacity = value;
             }
             else
             {
@@ -32,15 +32,16 @@ public class Container
 
     public int Contents
     {
-        get { return contents; }
-        set { contents = value; }
+        get { return _contents; }
+        protected set { _contents = value; }
+        // The setter is protected to ensure that it can only be changed by the fill and empty functions outside of this class.
     }
 
-    public void IncreaseContent(int amount)
+    public void FillContent(int amount)
     {
-        if (contents + amount <= Capacity)
+        if (_contents + amount <= Capacity)
         {
-            contents += amount;
+            _contents += amount;
         }
         else
         {
@@ -49,21 +50,21 @@ public class Container
         }
     }
 
-    public void DecreaseContent(int amount)
+    public void EmptyContent(int amount)
     {
-        if (contents - amount >= 0)
+        if (_contents - amount >= 0)
         {
-            contents -= amount;
+            _contents -= amount;
         }
         else
         {
-            throw new ArgumentOutOfRangeException(nameof(amount), 
+            throw new ArgumentOutOfRangeException(nameof(amount),
                 "Cannot decrease content below 0.");
         }
     }
 
     public void EmptyContent()
     {
-        contents = 0;
+        _contents = 0;
     }
 }

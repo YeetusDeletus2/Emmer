@@ -1,31 +1,25 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
-	<s:String x:Key="/Default/CodeInspection/PencilsConfiguration/ActualSeverity/@EntryValue">WARNING</s:String>
+	<s:String x:Key="/Default/CodeInspection/PencilsConfiguration/ActualSeverity/@EntryValue">INFO</s:String>
 	<s:String x:Key="/Default/CodeInspection/PencilsConfiguration/FiltersState/=CodeStyle/@EntryIndexedValue">On</s:String>
 	<s:String x:Key="/Default/CodeInspection/PencilsConfiguration/FiltersState/=NamingFilter/@EntryIndexedValue">On</s:String>
 	<s:String x:Key="/Default/CodeInspection/PencilsConfiguration/FiltersState/=SpellingFilter/@EntryIndexedValue">On</s:String>
 	<s:Boolean x:Key="/Default/Environment/Highlighting/HighlightingEnabled/@EntryValue">True</s:Boolean>
 	<s:String x:Key="/Default/Environment/Highlighting/HighlightingMode/@EntryValue">OnlyMarkers</s:String>
 	<s:String x:Key="/Default/Environment/Highlighting/HighlightingSourceSnapshotLocation/@EntryValue">C:\Users\11897\AppData\Local\JetBrains\Rider2023.3\resharper-host\temp\Rider\vAny\CoverageData\_Emmer.-1666589797\Snapshot\snapshot.utdcvr</s:String>
-	
-	
-	
-	
-	
-	
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=013eb8c2_002Db772_002D4ed4_002Db1b4_002D02e8aca6ed0b/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="ValidCapacities" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
-  &lt;Solution /&gt;&#xD;
-&lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=018e038e_002D1134_002D41ca_002Da341_002Dde2664b46b34/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="InvalidCapacities" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
-  &lt;Project Location="C:\Users\11897\RiderProjects\Emmer\EmmerTest" Presentation="&amp;lt;EmmerTest&amp;gt;" /&gt;&#xD;
-&lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=b1452c1f_002Dcb0a_002D4d25_002D800a_002Dc935ab3ab40d/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="CapacityIs159" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=edcb28ab_002Da0c4_002D4eb8_002D82c9_002Da38a2b5da163/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="BucketTests" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;TestAncestor&gt;&#xD;
-    &lt;TestId&gt;NUnit3x::CD32E20C-B35A-4CA0-8728-8B3522570A8B::net8.0::EmmerTest.OilbarrelTests.CapacityIs159&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;NUnit3x::CD32E20C-B35A-4CA0-8728-8B3522570A8B::net8.0::EmmerTest.RainbarrelTests.InvalidCapacities&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;NUnit3x::CD32E20C-B35A-4CA0-8728-8B3522570A8B::net8.0::EmmerTest.RainbarrelTests.FillAndEmptyRainbarrel&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;NUnit3x::CD32E20C-B35A-4CA0-8728-8B3522570A8B::net8.0::EmmerTest.ContainerTests.ValidCapacities&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::CD32E20C-B35A-4CA0-8728-8B3522570A8B::net8.0::EmmerTest.BucketTests&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	

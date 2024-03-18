@@ -17,7 +17,7 @@ public class OilbarrelTests
     {
         var oilbarrel = new Oilbarrel();
         int amount = 5;
-        oilbarrel.IncreaseContent(amount);
+        oilbarrel.FillContent(amount);
         Assert.That(oilbarrel.Contents, Is.EqualTo(amount));
 
         oilbarrel.EmptyContent();

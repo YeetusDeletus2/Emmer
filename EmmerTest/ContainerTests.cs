@@ -37,12 +37,13 @@ public class ContainerTests
     public void Contents_Setter()
     {
         var bucket = new Bucket();
-        bucket.Contents = 10;
+        bucket.FillContent(10);
         Assert.That(bucket.Contents, Is.EqualTo(10));
     }
 
     [Test]
     public void Content_NotNegative()
+    // default
     {
         var container = new Container();
         Assert.That(container.Contents, Is.GreaterThanOrEqualTo(0));
@@ -52,15 +53,15 @@ public class ContainerTests
     public void IncreaseContentsException()
     {
         var bucket = new Bucket(12);
-        Assert.Throws<ArgumentOutOfRangeException>(() => bucket.IncreaseContent(13));
+        Assert.Throws<ArgumentOutOfRangeException>(() => bucket.FillContent(13));
     }
 
     [Test]
     public void DecreaseContents()
     {
         var bucket = new Bucket();
-        bucket.Contents = 10;
-        bucket.DecreaseContent(5);
+        bucket.FillContent(10);
+        bucket.EmptyContent(5);
         Assert.That(bucket.Contents, Is.EqualTo(5));
     }
     
@@ -68,7 +69,7 @@ public class ContainerTests
     public void DecreaseContentsException()
     {
         var bucket = new Bucket();
-        bucket.Contents = 10;
-        Assert.Throws<ArgumentOutOfRangeException>(() => bucket.DecreaseContent(11));
+        bucket.FillContent(10);
+        Assert.Throws<ArgumentOutOfRangeException>(() => bucket.EmptyContent(11));
     }
 }

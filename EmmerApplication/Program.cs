@@ -23,7 +23,7 @@ namespace EmmerApplication
                 Console.WriteLine("\nIncreasing the contents of the bucket with 8 units.");
                 try
                 {
-                    bucket1.IncreaseContent(8);
+                    bucket1.FillContent(8);
                     Console.WriteLine($"Bucket Capacity: {bucket1.Capacity} || Bucket Contents: {bucket1.Contents}");
                 }
                 catch (ArgumentOutOfRangeException e)
@@ -39,25 +39,11 @@ namespace EmmerApplication
             {
                 Console.WriteLine($"An WrongCapacityException occurred: {e.Message}");
             }
-
-
-            Console.WriteLine("\nMaking a rainbarrel with capacity 110.");
-            try
-            {
-                Rainbarrel rainBarrel2 = new Rainbarrel(110);
-                Console.WriteLine(
-                    $"Rain Barrel Capacity: {rainBarrel2.Capacity} || Rain Barrel Contents: {rainBarrel2.Contents}");
-            }
-            catch (WrongCapacityException e)
-            {
-                Console.WriteLine($"An WrongCapacityException occurred: {e.Message}");
-            }
-
-
+            
             Console.WriteLine("\nMaking a rainbarrel with capacity 100.");
             try
             {
-                Rainbarrel rainBarrel = new Rainbarrel(100);
+                Rainbarrel rainBarrel = new Rainbarrel(RainbarrelCapacity.Hundered);
                 Console.WriteLine(
                     $"Rain Barrel Capacity: {rainBarrel.Capacity} || Rain Barrel Contents: {rainBarrel.Contents}");
 
@@ -74,7 +60,7 @@ namespace EmmerApplication
                 Console.WriteLine("\nIncreaseing the contents of the rainbarrel with 110 units.");
                 try
                 {
-                    rainBarrel.IncreaseContent(110);
+                    rainBarrel.FillContent(110);
                 }
                 catch (ArgumentOutOfRangeException e)
                 {
@@ -103,7 +89,7 @@ namespace EmmerApplication
                 Console.WriteLine("\nIncreasing the contents of the bucket with 12 units.");
                 try
                 {
-                    bucket2.IncreaseContent(12);
+                    bucket2.FillContent(12);
                 }
                 catch (ArgumentOutOfRangeException e)
                 {

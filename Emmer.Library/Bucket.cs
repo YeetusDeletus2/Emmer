@@ -3,33 +3,38 @@ namespace Emmer.Library;
 public class Bucket : Container
 {
     public event OverflowEventHandler Overflow;
+    public const int DefaultCapacity = 12;
 
     public Bucket(int capacity)
     {
-        if (capacity < 10 || capacity > 12)
+        // Creates a bucket of which the capacity should be between 10 and 2500
+        if (capacity < 10 || capacity > 2500)
         {
-            throw new InvalidOperationException("The capacity of a buckets can only be between 10 and 12.");
+            throw new WrongCapacityException(nameof(capacity),
+                "The capacity of a buckets can only be between 10 and 2500.");
         }
-
-        this.Capacity = capacity;
+        Capacity = capacity;
     }
 
 
-    public Bucket()
+    public Bucket() : this(DefaultCapacity)
     {
-        this.Capacity = 12;
+        // Creates a bucket with the default capacity
     }
 
     public void FillFromBucket(Bucket bucket)
     {
+        // Fills the first bucket with the contents of the second bucket. 
         int temp = bucket.Contents;
         try
         {
-            this.IncreaseContent(temp);
-            bucket.DecreaseContent(temp);
+            // try filling the first bucket.
+            FillContent(temp);
+            bucket.EmptyContent(temp);
         }
         catch (ArgumentOutOfRangeException e)
         {
+            // The bucket is overflowing.
             int overflowAmount = this.Contents + temp - this.Capacity;
             Overflow?.Invoke(overflowAmount);
 
@@ -37,8 +42,8 @@ public class Bucket : Container
             int overflow = int.Parse(Console.ReadLine());
             if (overflow <= overflowAmount)
             {
-                this.IncreaseContent(this.Capacity);
-                bucket.DecreaseContent(temp - overflow);
+                FillContent(this.Capacity);
+                bucket.EmptyContent(temp - overflow);
             }
             else
             {
