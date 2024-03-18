@@ -43,7 +43,7 @@ public class ContainerTests
 
     [Test]
     public void Content_NotNegative()
-    // default
+        // default
     {
         var container = new Container();
         Assert.That(container.Contents, Is.GreaterThanOrEqualTo(0));
@@ -64,7 +64,7 @@ public class ContainerTests
         bucket.EmptyContent(5);
         Assert.That(bucket.Contents, Is.EqualTo(5));
     }
-    
+
     [Test]
     public void DecreaseContentsException()
     {

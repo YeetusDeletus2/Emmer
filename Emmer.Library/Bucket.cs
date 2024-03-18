@@ -13,6 +13,7 @@ public class Bucket : Container
             throw new WrongCapacityException(nameof(capacity),
                 "The capacity of a buckets can only be between 10 and 2500.");
         }
+
         Capacity = capacity;
     }
 

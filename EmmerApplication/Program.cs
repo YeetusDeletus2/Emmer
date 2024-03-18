@@ -12,7 +12,7 @@ namespace EmmerApplication
             {
                 Console.WriteLine($"Bucket overflowed by {overflowAmount} units!");
             }
-            
+
             Console.WriteLine("Making a bucket with default capacity.");
             try
             {
@@ -39,7 +39,7 @@ namespace EmmerApplication
             {
                 Console.WriteLine($"An WrongCapacityException occurred: {e.Message}");
             }
-            
+
             Console.WriteLine("\nMaking a rainbarrel with capacity 100.");
             try
             {
@@ -95,11 +95,12 @@ namespace EmmerApplication
                 {
                     Console.WriteLine($"An ArgumentOutOfRangeException occurred: {e.Message}");
                 }
+
                 Console.WriteLine($"Bucket Capacity: {bucket2.Capacity} || Bucket Contents: {bucket2.Contents}");
                 Console.WriteLine("Making a standard bucket.");
                 Bucket bucket3 = new Bucket(10);
                 bucket3.Overflow += HandleOverflow;
-                
+
                 Console.WriteLine("\nFilling the new bucket with the contents of the other bucket.");
                 try
                 {
@@ -110,7 +111,8 @@ namespace EmmerApplication
                     Console.WriteLine($"An ArgumentOutOfRangeException occurred: {e.Message}");
                 }
 
-                Console.WriteLine($"New bucket Capacity: {bucket3.Capacity} || New bucket Contents: {bucket3.Contents}");
+                Console.WriteLine(
+                    $"New bucket Capacity: {bucket3.Capacity} || New bucket Contents: {bucket3.Contents}");
                 Console.WriteLine($"Bucket 2 Capacity: {bucket2.Capacity} || Bucket 2 Contents: {bucket2.Contents}");
             }
             catch (WrongCapacityException e)
