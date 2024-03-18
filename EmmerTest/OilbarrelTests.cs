@@ -8,14 +8,14 @@ public class OilbarrelTests
     [Test]
     public void CapacityIs159()
     {
-        var oilBarrel = new Oilbarrel();
-        Assert.That(oilBarrel.Capacity, Is.EqualTo(159));
+        Oilbarrel oilBarrel = new Oilbarrel();
+        Assert.That(oilBarrel.Capacity, Is.EqualTo(Oilbarrel.MaxCapacity));
     }
 
     [Test]
     public void FillAndEmptyOilbarrel()
     {
-        var oilbarrel = new Oilbarrel();
+        Oilbarrel oilbarrel = new Oilbarrel();
         int amount = 5;
         oilbarrel.FillContent(amount);
         Assert.That(oilbarrel.Contents, Is.EqualTo(amount));

@@ -22,7 +22,7 @@ public class BucketTests
     [Test]
     public void DefaultCapacityIs12()
     {
-        var bucket = new Bucket();
+        Bucket bucket = new Bucket();
         int defaultCapacity = Bucket.DefaultCapacity;
         Assert.That(bucket.Capacity, Is.EqualTo(defaultCapacity));
     }
@@ -31,7 +31,7 @@ public class BucketTests
     public void CustomCapacity()
     {
         int capactity = 10;
-        var bucket = new Bucket(capactity);
+        Bucket bucket = new Bucket(capactity);
         Assert.That(bucket.Capacity, Is.EqualTo(capactity));
     }
 
@@ -68,7 +68,7 @@ public class BucketTests
     [Test]
     public void EmptyBucket()
     {
-        var bucket = new Bucket();
+        Bucket bucket = new Bucket();
         bucket.FillContent(10);
         bucket.EmptyContent();
         Assert.That(bucket.Contents, Is.EqualTo(0));
