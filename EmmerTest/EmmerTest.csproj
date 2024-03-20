@@ -19,6 +19,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\Emmer.Library\Emmer.Library.csproj" />
+      <ProjectReference Include="..\EmmerApplication\EmmerApplication.csproj" />
     </ItemGroup>
 
 </Project>

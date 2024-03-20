@@ -16,7 +16,7 @@ public class RainbarrelTests
     [Test]
     public void FillAndEmptyRainbarrel()
     {
-        var rainbarrel = new Rainbarrel(RainbarrelCapacity.Hundered);
+        Rainbarrel rainbarrel = new Rainbarrel(RainbarrelCapacity.Hundered);
         int amount = 5;
         rainbarrel.FillContent(amount);
         Assert.That(rainbarrel.Contents, Is.EqualTo(amount));

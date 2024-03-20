@@ -6,6 +6,6 @@ public class Oilbarrel : Container
 
     public Oilbarrel()
     {
-        this.Capacity = MaxCapacity;
+        Capacity = MaxCapacity;
     }
 }

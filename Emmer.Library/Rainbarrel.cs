@@ -6,6 +6,6 @@ public class Rainbarrel : Container
 
     public Rainbarrel(RainbarrelCapacity capacity)
     {
-        this.Capacity = (int)capacity;
+        Capacity = (int)capacity;
     }
 }
