@@ -9,6 +9,7 @@
       "EmmerTest/1.0.0": {
         "dependencies": {
           "Emmer.Library": "1.0.0",
+          "EmmerApplication": "1.0.0",
           "Microsoft.NET.Test.Sdk": "17.6.0",
           "NUnit": "3.13.3",
           "NUnit.Analyzers": "3.6.1",
@@ -321,6 +322,14 @@
         "runtime": {
           "Emmer.Library.dll": {}
         }
+      },
+      "EmmerApplication/1.0.0": {
+        "dependencies": {
+          "Emmer.Library": "1.0.0"
+        },
+        "runtime": {
+          "EmmerApplication.dll": {}
+        }
       }
     }
   },
@@ -422,6 +431,11 @@
       "hashPath": "system.reflection.metadata.1.6.0.nupkg.sha512"
     },
     "Emmer.Library/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "EmmerApplication/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

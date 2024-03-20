@@ -391,6 +391,19 @@
         "runtime": {
           "bin/placeholder/Emmer.Library.dll": {}
         }
+      },
+      "EmmerApplication/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Emmer.Library": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/EmmerApplication.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EmmerApplication.dll": {}
+        }
       }
     }
   },
@@ -989,11 +1002,17 @@
       "type": "project",
       "path": "../Emmer.Library/Emmer.Library.csproj",
       "msbuildProject": "../Emmer.Library/Emmer.Library.csproj"
+    },
+    "EmmerApplication/1.0.0": {
+      "type": "project",
+      "path": "../EmmerApplication/EmmerApplication.csproj",
+      "msbuildProject": "../EmmerApplication/EmmerApplication.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
       "Emmer.Library >= 1.0.0",
+      "EmmerApplication >= 1.0.0",
       "Microsoft.NET.Test.Sdk >= 17.6.0",
       "NUnit >= 3.13.3",
       "NUnit.Analyzers >= 3.6.1",
@@ -1030,6 +1049,9 @@
           "projectReferences": {
             "C:\\Users\\11897\\RiderProjects\\Emmer\\Emmer.Library\\Emmer.Library.csproj": {
               "projectPath": "C:\\Users\\11897\\RiderProjects\\Emmer\\Emmer.Library\\Emmer.Library.csproj"
+            },
+            "C:\\Users\\11897\\RiderProjects\\Emmer\\EmmerApplication\\EmmerApplication.csproj": {
+              "projectPath": "C:\\Users\\11897\\RiderProjects\\Emmer\\EmmerApplication\\EmmerApplication.csproj"
             }
           }
         }

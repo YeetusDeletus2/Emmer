@@ -101,3 +101,8 @@ C:\Users\11897\RiderProjects\Emmer\EmmerTest\obj\Debug\net8.0\EmmerTest.genrunti
 C:\Users\11897\RiderProjects\Emmer\EmmerTest\obj\Debug\net8.0\ref\EmmerTest.dll
 C:\Users\11897\RiderProjects\Emmer\EmmerTest\obj\Debug\net8.0\EmmerTest.sourcelink.json
 C:\Users\11897\RiderProjects\Emmer\EmmerTest\obj\Debug\net8.0\EmmerTest.csproj.Up2Date
+C:\Users\11897\RiderProjects\Emmer\EmmerTest\bin\Debug\net8.0\EmmerApplication.deps.json
+C:\Users\11897\RiderProjects\Emmer\EmmerTest\bin\Debug\net8.0\EmmerApplication.runtimeconfig.json
+C:\Users\11897\RiderProjects\Emmer\EmmerTest\bin\Debug\net8.0\EmmerApplication.exe
+C:\Users\11897\RiderProjects\Emmer\EmmerTest\bin\Debug\net8.0\EmmerApplication.dll
+C:\Users\11897\RiderProjects\Emmer\EmmerTest\bin\Debug\net8.0\EmmerApplication.pdb

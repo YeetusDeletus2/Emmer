@@ -2,7 +2,6 @@ namespace Emmer.Library;
 
 public class Bucket : Container
 {
-    public event OverflowEventHandler Overflow;
     public const int DefaultCapacity = 12;
 
     public Bucket(int capacity)
@@ -23,33 +22,12 @@ public class Bucket : Container
         // Creates a bucket with the default capacity
     }
 
-    public void FillFromBucket(Bucket bucket)
+    public void FillFromBucket(Bucket otherBucket)
     {
         // Fills the first bucket with the contents of the second bucket. 
-        int temp = bucket.Contents;
-        try
-        {
-            // try filling the first bucket.
-            FillContent(temp);
-            bucket.EmptyContent(temp);
-        }
-        catch (ArgumentOutOfRangeException e)
-        {
-            // The bucket is overflowing.
-            int overflowAmount = this.Contents + temp - this.Capacity;
-            Overflow?.Invoke(overflowAmount);
-
-            Console.WriteLine($"How much do you want the bucket to overflow? max: {overflowAmount}");
-            int overflow = int.Parse(Console.ReadLine());
-            if (overflow <= overflowAmount)
-            {
-                FillContent(this.Capacity);
-                bucket.EmptyContent(temp - overflow);
-            }
-            else
-            {
-                Console.WriteLine("Invalid overflow amount. Aborting bucket transfer.");
-            }
-        }
+        int temp = otherBucket.Contents;
+        // try filling the first bucket.
+        FillContent(temp, out int overflow);
+        otherBucket.EmptyContent(temp - overflow);
     }
 }

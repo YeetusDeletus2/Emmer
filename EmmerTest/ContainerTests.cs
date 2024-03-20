@@ -50,13 +50,6 @@ public class ContainerTests
     }
 
     [Test]
-    public void IncreaseContentsException()
-    {
-        Bucket bucket = new Bucket(12);
-        Assert.Throws<ArgumentOutOfRangeException>(() => bucket.FillContent(13));
-    }
-
-    [Test]
     public void DecreaseContents()
     {
         Bucket bucket = new Bucket();

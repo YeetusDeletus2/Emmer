@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EmmerApplication")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a8db6d2e469a8dce0f13e6139c14ef876745cddb")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+40b68992835f3a980d6ac417cbc8248544d0189b")]
 [assembly: System.Reflection.AssemblyProductAttribute("EmmerApplication")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EmmerApplication")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

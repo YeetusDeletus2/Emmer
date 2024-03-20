@@ -8,12 +8,25 @@ namespace EmmerApplication
     {
         static void Main(string[] args)
         {
-            void HandleOverflow(int overflowAmount)
+            void HandleOverflow(int overflowAmount, out int overflow)
             {
-                Console.WriteLine($"Bucket overflowed by {overflowAmount} units!");
+                Console.WriteLine($"Container overflowed by {overflowAmount} units!");
+                Console.WriteLine($"How much do you want the container to overflow? max: {overflowAmount}");
+
+                int temp = int.Parse(Console.ReadLine());
+                if (temp <= overflowAmount)
+                {
+                    overflow = temp;
+                }
+
+                else
+                {
+                    Console.WriteLine("Invalid overflow amount. Aborting container transfer.");
+                    overflow = 0;
+                }
             }
 
-            Console.WriteLine("Making a bucket with default capacity.");
+            /* Console.WriteLine("Making a bucket with default capacity.");
             try
             {
                 Bucket bucket1 = new Bucket();
@@ -79,7 +92,8 @@ namespace EmmerApplication
             Oilbarrel oilBarrel = new Oilbarrel();
             Console.WriteLine(
                 $"Oil Barrel Capacity: {oilBarrel.Capacity} || Oil Barrel Contents: {oilBarrel.Contents}");
-
+            */
+            /*
             Console.WriteLine("\nMaking a bucket with capacity 10.");
             try
             {
@@ -102,15 +116,8 @@ namespace EmmerApplication
                 bucket3.Overflow += HandleOverflow;
 
                 Console.WriteLine("\nFilling the new bucket with the contents of the other bucket.");
-                try
-                {
-                    bucket3.FillFromBucket(bucket2);
-                }
-                catch (ArgumentOutOfRangeException e)
-                {
-                    Console.WriteLine($"An ArgumentOutOfRangeException occurred: {e.Message}");
-                }
-
+                bucket3.FillFromBucket(bucket2);
+                
                 Console.WriteLine(
                     $"New bucket Capacity: {bucket3.Capacity} || New bucket Contents: {bucket3.Contents}");
                 Console.WriteLine($"Bucket 2 Capacity: {bucket2.Capacity} || Bucket 2 Contents: {bucket2.Contents}");
@@ -118,6 +125,25 @@ namespace EmmerApplication
             catch (WrongCapacityException e)
             {
             }
+            */
+            Bucket bucket = new Bucket(10); // Capacity 10
+            int handledOverflow = 0;
+
+            // Subscribe to the overflow event
+            bucket.Overflow += (int amount, out int outOverflow) =>
+            {
+                handledOverflow = amount; // Captures the overflow amount
+                outOverflow = amount; // Assigns the overflow amount to the out parameter
+            };
+
+            // Act: Fill the container with different overflow amounts
+            bucket.FillContent(12);
+            int overflow1 = handledOverflow; // Capture the first overflow amount
+            bucket.FillContent(5);
+            int overflow2 = handledOverflow; // Capture the second overflow amount
+
+            Console.WriteLine("Overflow1: " + overflow1 + "    Overflow2:  " + overflow2);
+            Console.WriteLine("Should be : 2 , 5.");
         }
     }
 }

@@ -48,23 +48,7 @@ public class BucketTests
         Assert.That(bucket.Contents, Is.EqualTo(0));
         Assert.That(bucket2.Contents, Is.EqualTo(5));
     }
-
-    /*
-    [Test]
-    public void FillFromBucket_ThrowsException_ContentNotIncreased()
-    {
-        // Arrange
-        Bucket bucket = new Bucket();
-        Bucket bucket2 = new Bucket(10);
-        bucket.FillContent(12);
-        StringWriter stringWriter = new StringWriter();
-        Console.SetOut(stringWriter);
-
-        bucket2.FillFromBucket(bucket);
-
-        Assert.That(stringWriter.ToString(), Is.EqualTo("An ArgumentOutOfRangeException occurred: Cannot increase content above the capacity. (Parameter 'amount')\r\n"));
-    }
-*/
+    
     [Test]
     public void EmptyBucket()
     {
@@ -72,5 +56,43 @@ public class BucketTests
         bucket.FillContent(10);
         bucket.EmptyContent();
         Assert.That(bucket.Contents, Is.EqualTo(0));
+    }
+    
+    [Test]
+    public void OverflowEvent_IsTriggered_WhenBucketContentsExceedCapacity()
+    {
+        Bucket bucket = new Bucket(10);
+        int overflowAmount = 0;
+
+        bucket.Overflow += (int amount, out int outOverflow) =>
+        {
+            overflowAmount = amount;
+            outOverflow = amount;
+        };
+
+        bucket.FillContent(12);
+
+        Assert.That(overflowAmount, Is.EqualTo(2));
+    }
+
+    [Test]
+    public void OverflowEvent_HandlesCorrectly_WhenBucketHasAlreadyBeenFilled()
+    {
+        Bucket bucket = new Bucket(10); 
+        int handledOverflow = 0;
+
+        bucket.Overflow += (int amount, out int outOverflow) =>
+        {
+            handledOverflow = amount; 
+            outOverflow = amount; 
+        };
+
+        bucket.FillContent(12);
+        int overflow1 = handledOverflow; 
+        bucket.FillContent(5);
+        int overflow2 = handledOverflow; 
+
+        Assert.That(overflow1, Is.EqualTo(2));
+        Assert.That(overflow2, Is.EqualTo(5));
     }
 }
